@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Profile</h1>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name">
+  <br>
+
+  <button id="set">Set</button>
+  <button id="get">Get</button>
+
+  <script>
+    class UserProfile {
+      constructor() {
+        this._name = "";
+      }
+
+      get name1() {
+        return this._name;
+      }
+
+      set name2(value) {
+        this._name = value.trim();
+      }
+    }
+
+    const nameInput = document.getElementById("name");
+    const setButton = document.getElementById("set");
+    const getButton = document.getElementById("get");
+
+    const userProfile = new UserProfile();
+
+    setButton.addEventListener("click", () => {
+      userProfile.name2 = nameInput.value;
+    });
+
+    getButton.addEventListener("click", () => {
+      alert(`Name: ${userProfile.name1}`);
+    });
+  </script>
+</body>
+</html>
