@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .container h1 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        .container button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+        }
+
+
+        .result {
+            margin-top: 10px;
+            color: red;
+        }
+
+        .result p {
+            margin: 5px 0;
+        }
+
+        .capsule {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Practical no 2 <br>Developed a Javascript to use decision making and looping statements</h2>
+    </div>
+    <div class="capsule">
+
+        <div class="container">
+            <h1>if else program</h1>
+            <button onclick="par()">if else</button>
+            <div id="con1" class="result"></div>
+        </div>
+
+        <div class="container">
+            <h1>for loop program</h1>
+            <button onclick="par1()">for</button>
+            <div id="con2" class="result"></div>
+        </div>
+
+        <div class="container">
+            <h1>while loop program</h1>
+            <button onclick="par2()">while</button>
+            <div id="con3" class="result"></div>
+        </div>
+
+        <div class="container">
+            <h1>do while loop</h1>
+            <button onclick="par3()">do while</button>
+            <div id="con4" class="result"></div>
+        </div>
+
+    </div>
+    <script>
+        function par() {
+            const number = prompt("Enter a number: ");
+            var cons1 = document.getElementById("con1");
+            if (number > 0) {
+                const z = "<p>Positive number</p>";
+                cons1.innerHTML = z;
+            } else {
+                const z = "<p>Negative number</p>";
+                cons1.innerHTML = z;
+            }
+        }
+
+        function par1() {
+            var doc = prompt("Please enter a number:");
+            var outputDiv = document.getElementById("con2");
+            outputDiv.innerHTML = ""; // Clear previous content
+            if (doc > 0) {
+                for (let i = 1; i < 11; i++) {
+                    const result = doc * i;
+                    outputDiv.innerHTML += "<p>" + result + "</p>";
+                }
+            }
+        }
+
+        function par2() {
+            var doc = prompt("Please enter a number:");
+            var outputDiv = document.getElementById("con3");
+            outputDiv.innerHTML = ""; // Clear previous content
+            if (doc > 0) {
+                let i = 1;
+                while (i < 11) {
+                    const result = doc * i;
+                    outputDiv.innerHTML += "<p>" + result + "</p>";
+                    i++;
+                }
+            }
+        }
+
+        function par3() {
+            var doc = prompt("Please enter a number:");
+            var outputDiv = document.getElementById("con4");
+            outputDiv.innerHTML = ""; // Clear previous content
+            if (doc != null) {
+                let i = 1;
+                do {
+                    const result = doc * i;
+                    outputDiv.innerHTML += "<p>" + result + "</p>";
+                    i++;
+                } while (i < 11)
+            }
+        }
+    </script>
+</body>
+
+</html>
