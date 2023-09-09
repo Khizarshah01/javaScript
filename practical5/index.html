@@ -3,14 +3,60 @@
 
 <head>
     <title>String</title>
+
+    <!-- In JavaScript, a string is a data type used to represent a sequence of characters. 
+        Strings are typically used to store and manipulate text. You can create strings using single quotes ('),
+         double quotes ("), or backticks (``). -->
+
+
 </head>
 
 <body>
     <script type="text/javascript">
-        var str = prompt("Please enter some text", "Enter a name ");
-        var str1 = prompt("Please enter some text", "Enter a surname");
+        // var str = prompt("Please enter some text", "Enter a name ");
+        // var str1 = prompt("Please enter some text", "Enter a surname");
+
+        var str = "Harsh ";
+        var str1 = "Braliya";
+
+        // indexing present in string also 
+        let character = str[1]; // Retrieves the character 'a'
+        console.log(character);
+        // a
+
+        // concat() is use to join two or more string at one. 
         let name = str.concat(str1);
-        document.write(name);
+        console.log(name);
+        // Harsh Braliya
+
+        // indexOf() find the index of the cahracter 
+        console.log(str.indexOf("s"));
+        // 3
+
+        // split() break down the string into to sub string.
+        console.log(str1.split('i'));
+        // ['Bral', 'ya']
+
+        //substring() take argument starting and ending . give the string
+        console.log(str.substring(0, 2)); // Copies 'Ha'
+        // Ha
+
+        // parseInt change the string to number.
+        let a = '34'
+        let number = parseInt(a);
+        console.log(typeof (number));
+        // number
+
+        // toString change the number to string.
+        console.log(typeof (number.toString()));
+        // string
+
+        
+        let mixedCase = 'HeLLo WoRLd';
+        console.log(mixedCase.toUpperCase()); // Converts to 'HELLO WORLD'
+        console.log(mixedCase.toLowerCase()); // Converts to 'hello world'
+
+
     </script>
 </body>
 
