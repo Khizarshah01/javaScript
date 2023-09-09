@@ -7,10 +7,48 @@
 
 <body>
     <script type="text/javascript">
+        
         let arr = ["Om", "Yash", "Arshad"];
-        for (let i = 0; i < arr.length; i++) {
-            document.write(arr[i], "<br>");
-        }
+            document.write(arr);
+      
+
+        //Methods in javascript 
+
+        // all ouput show in console oK!
+
+
+        //join() this method is used to convert a array into a single string.
+        console.log(arr.join(" - ")); // in the paranthis i added the sperator - 
+        // Om - Yash - Arshad
+
+        // toString() this method is similar to join but toString use "," by default 
+        console.log(arr.toString());
+        // Om,Yash,Arshad
+
+        // change orginal array // pop() is use to remove the last element this method change orignal array and return the pop elemet in this example Arshad is pop so they reomve
+        console.log(arr.pop());
+        // Arshad
+
+        // change orignal array // push() this is mehtod add the element at the last position we already the remove Arshad now we want to add it using psuh method. 
+        arr.push("Arshad");
+        console.log(arr);
+        // ['Om', 'Yash', 'Arshad']
+
+        // chnage orginal array // reverse() this is method reverse the array important change orginal array.
+        console.log(arr.reverse());
+        // ['Arshad', 'Yash', 'Om']
+
+        // shift() is simlar to pop but they remove first element of array it means arr[0].
+        arr.shift()
+        console.log(arr);
+        // ['Yash', 'Om']
+
+
+        // unShift() this is simlar to push but they add the element in first postion means arr[0].
+        arr.unshift("Arshad");
+        console.log(arr);
+        // ['Arshad', 'Yash', 'Om']
+
     </script>
 </body>
 
