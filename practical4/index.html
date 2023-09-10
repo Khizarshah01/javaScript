@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <title></title>
+    <title>JavaScript Function Examples</title>
 </head>
-
 <body>
-    <script type="text/javascript">
-        var doc = prompt("Please enter some text", "Enter a name ");
-        greed(doc);
-
-        function greed(arg) {
-            document.write("welcome " + arg);
+    <script>
+        // Function with Arguments
+        function greet(name) {
+            console.log(`Hello, ${name}!`);
         }
+
+        greet('Alice'); // Outputs: Hello, Alice!
+
+        // Function with Return Value
+        function add(a, b) {
+            return a + b;
+        }
+
+        const sum = add(5, 3);
+        console.log(`Sum: ${sum}`); // Outputs: Sum: 8
+
+        // JavaScript Function Object
+        function createMultiplier(factor) {
+            return function(x) {
+                return x * factor;
+            };
+        }
+
+        const double = createMultiplier(2);
+        const triple = createMultiplier(3);
+
+        console.log(`Double of 4: ${double(4)}`); // Outputs: Double of 4: 8
+        console.log(`Triple of 4: ${triple(4)}`); // Outputs: Triple of 4: 12
     </script>
 </body>
-
 </html>
