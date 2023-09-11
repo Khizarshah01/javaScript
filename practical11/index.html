@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Browser</title>
+</head>
+
+<body>
+    <button onclick="google()">google</button>
+    <button onclick="close()">close</button>
+    <button onclick="newTab()">new Tab</button>
+    <script>
+        // open a new window
+        function google() {
+            const newWindow = window.open('https://www.google.com', '_blank', 'width=400,height=300');
+        }
+
+        // focus on new window
+        //newWindow.focus();
+
+        //move window
+        //newWindow.moveTo(100, 100);
+
+        function close() {
+            newWindow.close();
+        }
+
+        function back(){
+            // window.history.forward(); // Navigates forward in history
+            window.history.back();    // Navigates backward in history
+
+        }
+        function forward(){
+            window.history.forward(); // Navigates forward in history
+        }
+
+        //createing web page in new window 
+        function newTab(){
+            const newWindow = window.open('', '_parent', 'width=400,height=300');
+            const newDoc = document.implementation.createHTMLDocument('New Page');
+            newDoc.body.innerHTML = '<h1>Hello, New Window!</h1> <br> <button onclick="back()">Back</button> <button onclick="forward()">forward</button>';
+            newWindow.document.open();
+            newWindow.document.write(newDoc.documentElement.outerHTML);
+            newWindow.document.close();
+        }
+
+
+    </script>
+
+</body>
+
+</html>
