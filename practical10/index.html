@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cookies</title>
+</head>
+<body>
+    <script>
+        let username = prompt("Enter your name");
+        let age = prompt("Enter your age");
+
+
+        // create the cookie 
+        document.cookie = "name="+username;
+        document.cookie = "age="+age;
+
+        // create cookie with expire date and path 
+        document.cookie = "username=khizarshah01; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/";
+
+        // Read the cookie
+        let x = document.cookie;
+        document.write(x);
+
+        // Delete the cookie 
+        document.cookie = "username=khizarshah01; expires=Thu, 18 Dec 2022 12:00:00 UTC; path=/";
+
+
+        x = document.cookie;
+        document.write("<br>after delete the cookie <br>"+x);
+
+
+    </script>
+</body>
+</html>
