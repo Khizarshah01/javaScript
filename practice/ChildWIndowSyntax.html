@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Window Example</title>
+</head>
+<body>
+
+<h1>Main Window</h1>
+
+<!-- Button to trigger opening the child window -->
+<button onclick="openChildWindow()">Open Child Window</button>
+
+<script>
+function openChildWindow() {
+    // Open a child window
+    var childWindow = window.open('', '_blank', 'width=400,height=300');
+
+    // Wait for the child window to finish loading
+    childWindow.onload = function() {
+        // Access an element in the child window by its ID
+        var elementInChildWindow = childWindow.document.getElementById('elementInChild');
+
+        // Manipulate the element in the child window
+        if (elementInChildWindow) {
+            elementInChildWindow.innerHTML = 'Content changed in the child window!';
+        } else {
+            console.error('Element not found in the child window');
+        }
+    };
+
+    // Write HTML content to the child window
+    childWindow.document.write('<html><head><title>Child Window</title></head><body>');
+    childWindow.document.write('<h2>Child Window Content</h2>');
+    childWindow.document.write('<p id="elementInChild">Original content in the child window</p>');
+    childWindow.document.write('</body></html>');
+}
+</script>
+
+</body>
+</html>

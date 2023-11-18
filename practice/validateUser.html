@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="validate()">validate user</button>
+
+<script>
+     function validate(){
+        let user = prompt("Enter your user name:");
+        let pass = prompt("Enter your password:");
+
+        switch(user){
+            case "user1":
+                if(pass == "123"){
+                    confirm("you validate.")
+                }
+                else{
+                    confirm("you enter wrong password");
+                }
+                break;
+
+            case "user2":
+                if(pass == "123"){
+                    confirm("you validate.")
+                }
+                else{
+                    confirm("you enter wrong password");
+                }
+
+                break;
+            default:confirm("you enter wrong user name and password;");
+            break;
+            }
+     }
+</script>
+</body>
+</html>

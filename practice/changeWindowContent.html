@@ -1,0 +1,32 @@
+<!-- write a js program to changing the content of a window. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changing window content</title>
+</head>
+<body>
+    <h1>hello world!</h1>
+    <button onclick="change()">Change content</button>
+<script>
+
+    function change(){
+        // take input from user 
+        let input = prompt("Enter what content you want:");
+
+        //create new tag & add value on it
+        let content = document.createElement('h1');
+        content.textContent = input;
+
+        // using dom access body tag
+        let body = document.body;
+
+        // clear the html on body tags
+        body.innerHTML= "";
+
+        // add the new html which one we created
+        body.appendChild(content);
+    }
+</script>
+</body>
+</html>

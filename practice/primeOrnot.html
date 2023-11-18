@@ -1,0 +1,45 @@
+<!-- // write a js program to check  whether enter number is prime or not. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prime or not</title>
+</head>
+<body>
+<script>
+
+function isprime(num){
+    //parsing the string into integer
+    num = parseInt(num);
+
+
+    if(num == 1){
+        return false;
+    }
+
+    for(let i = 2; i<num;i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+
+let a = prompt("enter a number");
+
+let b = isprime(a);
+
+if (b==true)
+{
+    document.write("number is prime");
+}
+
+else{
+    document.write("number is not prime");
+}
+</script>    
+</body>
+</html>
+
+
