@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="example/01.jpg" id="banner" width="900" height="500">
+    <button onclick="left()">left</button>
+    <button onclick="right()"> right</button>
+
+    <script>
+        let arr = new Array("example/01.jpg","example/02.jpg","example/03.jpg");
+        let i = 1;
+
+        function right(){
+            if(i>=3){
+                i=1;
+            }
+            else{
+              i=i+1;
+            }
+            document.getElementById('banner').src="example/0"+i+".jpg"
+        }
+
+        function left(){
+            if(i<=1){
+                i=3;
+            }
+            else{
+                i=i-1;
+            }
+            document.getElementById('banner').src="example/0"+i+".jpg"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let discoutn = ['20%',"30%","10%"];
+      function show(a){
+        document.getElementById('disc').innerText=discoutn[a];
+      }
+    </script>
+    <center>
+        <table border="1">
+            <tr>
+                <th>book name</th>
+                <th>price</th>
+                <th>rating</th>
+            </tr>
+            <tr>
+                <td onmouseover="show(0)">
+                    hunting warrior
+                </td>
+                <td>
+                    500
+                </td>
+                <td>
+                    4/5
+                </td>
+            </tr>
+            <tr>
+                <td onmouseover="show(1)">
+                    hunting 
+                </td>
+                <td>
+                    500
+                </td>
+                <td>
+                    3/5
+                </td>
+            </tr>
+            <tr>
+                <td onmouseover="show(2)">
+                     warrior
+                </td>
+                <td>
+                    800
+                </td>
+                <td>
+                    5/5
+                </td>
+            </tr>
+        </table>
+        <h2 id="disc"></h2>
+    </center>
+</body>
+</html>
