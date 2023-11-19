@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Folding Tree Menu</title>
+</head>
+<body>
+
+<ul class="tree" onclick="toggleNode(event)">
+  <li>Root
+    <ul>
+      <li>Node 1
+        <ul>
+          <li>Node 1.1</li>
+          <li>Node 1.2</li>
+        </ul>
+      </li>
+      <li>Node 2</li>
+      <li>Node 3
+        <ul>
+          <li>Node 3.1</li>
+          <li>Node 3.2</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+ 
+<script>
+  function toggleNode(event) {
+    if (event.target.tagName === 'LI') {
+      const childList = event.target.querySelector('ul');
+    }
+    document.childList.style=none
+  }
+</script>
+
+</body>
+</html>
