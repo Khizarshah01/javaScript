@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banner Advertisements</title>
+    <title>Document</title>
 </head>
-<body>
+<body onload="changebanner()">
+    <a href="http://www.google.com" id="ur">
+        <img src="example/01.jpg" width="900" height="500" name="ban">
+    </a>
 
-<!-- Example banner elements -->
-<div id="banner1" class="banner" onclick="redirectTo('https://example.com/banner1')">
-    <img src="banner1.jpg" alt="Banner 1">
-</div>
-
-<div id="banner2" class="banner" onclick="redirectTo('https://example.com/banner2')">
-    <img src="banner2.jpg" alt="Banner 2">
-</div>
-
-<div id="banner3" class="banner" onclick="redirectTo('https://example.com/banner3')">
-    <img src="banner3.jpg" alt="Banner 3">
-</div>
-
-<script>
-// Function to redirect to a specified URL
-function redirectTo(url) {
-    window.location.href = url;
-}
-</script>
-
+    <script>
+        let banner = new Array("example/01.jpg","example/02.jpg","example/03.jpg");
+        let link = new Array('http://www.google.com','http://www.kali.com','http://www.x.com');
+        let i = 0;
+        function changebanner(){
+            document.ban.src=banner[i];
+            document.getElementById('ur').href=link[i];
+            if(i==banner.length-1)
+            {
+                i =0;
+            }
+            else{
+                i++
+            }
+            setTimeout(changebanner,3000);
+        }
+    </script>
 </body>
 </html>

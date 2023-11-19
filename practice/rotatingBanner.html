@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="bannerchange()">
+    <img class="banner" src="example/01.jpg" width ="900" height="520" name="hero"/>
+<script>
+    let arr = new Array('example/01.jpg','example/02.jpg','example/03.jpg');
+    let i = 0;
+    function bannerchange(){
+        document.querySelector('.banner').src = arr[i];
+        if(i==arr.length-1){
+            i = 0;
+        }
+        else{
+            i++
+        }
+        setTimeout("bannerchange()",3000);
+    }
+</script>
+</body>
+</html>

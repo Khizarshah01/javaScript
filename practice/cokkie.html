@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <button onclick="createCoookie()">click to create</button>
+ <button onclick="update()">Update</button>
+ <button onclick="dlete()">delete</button>
+ <button onclick="readd()">read</button>
+ <script>
+        function createCoookie(){
+            document.cookie = "name=khizar;";
+        }
+
+        function update(){
+            let content = prompt("enter a key:");
+            content = content+"="+prompt("Enter a value");
+            document.cookie=content;
+        }
+
+        function dlete(){
+            let key = prompt("enter your key:")
+            document.cookie= key+"=; expires="+new Date(Date.now()-1).toUTCString()+";";
+        }
+
+        function readd(){
+            let cookie = document.cookie;
+            
+            let arr = cookie.split(';');
+            for (let index = 0; index <arr.length; index++) {
+                console.log(arr[index]);
+                
+            }
+
+        }
+    </script>
+</body>
+</html>
