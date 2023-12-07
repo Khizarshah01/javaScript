@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <select name="menu" onchange="getpage(this)">
+        
+        <option value="https://www.google.com">google</option>
+
+        <option value="https://www.brave.com">brave</option>
+
+        <option value="https://www.bing.com">bing</option>
+
+    </select>
+    <script>
+        function getpage(x){
+            let page=x.value;
+            window.location=page;
+        }
+    </script>
+</body>
+</html>

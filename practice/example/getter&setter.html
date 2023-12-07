@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let obj = {
+            objname:"bmw",
+            objcolor:"red",
+            get name(){
+                return this.objname;
+            },
+            get color(){
+                return this.objcolor;
+            },
+            set name(i){
+                this.objname=i;
+            },
+            set color(i){
+                this.objcolor=i;
+            }
+        }
+
+        document.write("before  "+obj.name + "  " + obj.color);
+        obj.name="audi";
+        obj.color="blue";
+        document.write("<br> after "+obj.name + "  " + obj.color);
+    </script>
+</body>
+</html>

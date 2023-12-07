@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <img src="01.jpg" name="kal" height="100px" width="200px">
+
+    <button name="prev" onclick="move(-1)">previous</button>
+    <button name="next" onclick="move(+1)">next</button>
+
+    <script>
+
+let z=0;
+let arr = ["01.jpg","02.jpg","03.jpg"];
+function move(x){
+    z=z+x;
+    if(z<0)
+    {
+        z=2;
+    }
+
+    else if(z>2)
+    {
+        z=0;
+    }
+
+    document.kal.src = arr[z];
+}
+    </script>
+</body>
+</html>

@@ -11,21 +11,12 @@
 <script>
 
     function change(){
-        // take input from user 
-        let input = prompt("Enter what content you want:");
 
         //create new tag & add value on it
-        let content = document.createElement('h1');
-        content.textContent = input;
+        let content = "<h1>this is new content</h1>";
 
-        // using dom access body tag
-        let body = document.body;
 
-        // clear the html on body tags
-        body.innerHTML= "";
-
-        // add the new html which one we created
-        body.appendChild(content);
+        document.write(content)
     }
 </script>
 </body>

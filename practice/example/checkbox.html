@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form name="myform">
+        <input type="checkbox" name="a" value="apple">Apple 
+        <input type="checkbox" name="b" value="banana">Banana 
+
+        <button onclick="sub()">Show</button>
+    </form>
+
+    <script>
+        let x = "i am eating ";
+
+        function sub(){
+            if(document.myform.a.checked==true)
+            {
+                x=x+document.myform.a.value;
+                console.log(x)
+            }
+            if(document.myform.b.checked==true)
+            {
+                x=x+document.myform.b.value;
+            }
+ document.write(x);
+        }
+ 
+ </script>
+</body>
+</html>
