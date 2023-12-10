@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <select id="select1" onchange="getthis(this)">
+    <option value="01.jpg">image 1</option>
+    <option value="02.jpg">image2</option>
+    <option value="03.jpg">image3</option>
+    </select>
+
+    <script>
+        function getthis(x){
+            var value = x.value;
+            console.log(value)
+            var newWIndow = window.open(value,'image','heigth= 400, width=500')
+        }
+    </script>
+</body>
+</html>

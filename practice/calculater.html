@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form name="myform" method="post">
+        enter first number <input type="text" name="first">
+        enter second number <input type="text" name="second">
+
+        <br>
+        <button onclick="add()">add</button>
+        <button onclick="sub()">sub</button>
+        <button onclick="mul()">mul</button>
+        <button onclick="div()">div</button>
+    </form>
+
+    <script>
+        function add(){
+            let a = document.myform.first.value;
+            let b = document.myform.second.value;
+
+            let c = a +b;
+
+            alert("answer is "+c)
+        }
+        function sub(){
+            let a = document.myform.first.value;
+            let b = document.myform.second.value;
+
+            let c = a - b;
+
+            alert("answer is "+c)
+        }
+
+        function mul(){
+            let a = document.myform.first.value;
+            let b = document.myform.second.value;
+
+            let c = a * b;
+
+            alert("answer is "+c)
+        }
+
+        function div(){
+            let a = document.myform.first.value;
+            let b = document.myform.second.value;
+
+            let c = a / b;
+
+            alert("answer is "+c)
+        }
+    </script>
+</body>
+</html>

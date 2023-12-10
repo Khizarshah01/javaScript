@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Folding Tree Menu</title>
+  <title>Document</title>
 </head>
+
 <body>
+  <ul>
+    <li>
+      <p onclick="toggle('menu1')"> Marvel </p>
+      <ul id="menu1" style="display: none;">
+        <li>
+          <p onclick="toggle('menu2')">iron man</p>
+          <ul id="menu2" style="display: none;">
+            <li>jarvis</li>
+          </ul>
+        </li>
+        <li>captain america
+          <ul style="display: none;">
+            <li>shield</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 
-<ul class="tree" onclick="toggleNode(event)">
-  <li>Root
-    <ul>
-      <li>Node 1
-        <ul>
-          <li>Node 1.1</li>
-          <li>Node 1.2</li>
-        </ul>
-      </li>
-      <li>Node 2</li>
-      <li>Node 3
-        <ul>
-          <li>Node 3.1</li>
-          <li>Node 3.2</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
- 
-<script>
-  function toggleNode(event) {
-    if (event.target.tagName === 'LI') {
-      const childList = event.target.querySelector('ul');
+  <script>
+    function toggle(id) {
+      var elment = document.getElementById(id);
+      if (elment.style.display == "none") {
+        elment.style.display = "block";
+      }
+      else {
+        elment.style.display = "none";
+      }
     }
-    document.childList.style=none
-  }
-</script>
-
+  </script>
 </body>
+
 </html>

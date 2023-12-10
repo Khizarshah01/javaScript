@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>frame2</title>
+</head>
+<body>
+    
+   <table border="1">
+<tr>
+<td>
+    <h1>Frame 1</h1>
+    <button onclick="imageshow()" >click here !</button>
+</td>
+<td>
+    <h1>Frame 2</h1>
+    <iframe src="" id="showI" height="500px" width="800px"></iframe>
+</td>    
+</tr>
+</table>
+
+    <script>
+        function imageshow(){
+            document.getElementById("showI").src="practice/example/01.jpg"
+        }
+    </script>
+</body>
+</html>
