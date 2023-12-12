@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="timming"></h1>
+    <button onclick="timer(1)">sart</button>
+    <button onclick="timer(-1)">stop</button>
+
+
+<script>
+     var a;
+    function timeing(){
+        var date = new Date();
+        var hr = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+    
+
+        document.getElementById('timming').innerHTML=hr+":"+min+":"+sec;
+    }
+    function timer(x)
+    {
+       
+        if(x==1)
+        {
+            a = setInterval(timeing,1000);
+        }
+        if(x==-1)
+        {
+
+            clearInterval(a)
+        }
+    }
+</script></body>
+</html>

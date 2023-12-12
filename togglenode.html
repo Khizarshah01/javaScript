@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+             <li onclick="show('node1')">Marvel</li>
+            <ul  id="node1" style="display: none;">
+                <ul>
+                    <li onclick="show('node2')" id="node2">captain 
+                        <ul>
+
+                            <li>c</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <ul>
+                    <li>iron man
+                        <ul>
+                            <li>cPP</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <ul>
+                    <li>thor 
+                        <ul>
+                            <li>java</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            
+        </ul>
+    </ul>
+
+    <script>
+        function show(x){
+            var s = document.getElementById(x).style;
+
+            if(s.display == 'none'){
+                s.display = 'block';
+            }
+            else{
+                s.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

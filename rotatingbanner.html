@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="rotate()">
+    <img src="practice/example/01.jpg" height="500px" width="800px" id="image">
+
+    <script>
+
+        var images = ['practice/example/01.jpg','practice/example/02.jpg','practice/example/03.jpg']
+        var i = 0;
+        function rotate(){
+            if(i<0)
+            {
+                i = images.length-1;
+            }
+            if(i>2)
+            {
+                i = 0;
+            }
+            
+            document.getElementById('image').src = images[i];
+            i++;
+            setTimeout(rotate,3000)
+        }
+
+    </script>
+</body>
+</html>

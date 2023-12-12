@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table  border="1">
+        <tr><td>Nmae</td> <td><input type="text" id="nmae"></td></tr>
+        <tr><td>Email</td> <td><input type="text" id="emai"></td>
+        </tr>
+        <tr><td>pin code</td> <td><input type="text" id="pincode"></td></tr>
+        <tr><td></td> <td><input type="button" id="submit" value="submit" onclick="changes()"></td></tr>
+    </table>
+
+    <script>
+        function changes(){
+            var name = document.getElementById('nmae');
+            var email = document.getElementById('emai');
+            var pin = document.getElementById('pincode');
+            if(name.value == "" || email.value == "" || pin.value == ""){
+                alert("not accept blank input")
+            }
+
+            var pattern = /^[0-9]+$/g
+            
+            if(pattern.test(pin.value))
+            {
+                alert("form submited")
+            }
+
+            else{
+                alert("younenter wrong pin code")
+            }
+        }
+    </script>
+</body>
+</html>

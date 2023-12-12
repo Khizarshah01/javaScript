@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // not metion in question which data structure is use for storeing
+
+        var arr = [['amit',70],['sumit',78],['abhishek',71]];
+
+        var arangearr = [];
+         
+        arangearr = arr.sort(function(a,b){ return a[1]-b[1]});
+
+        var avg = 0;
+        for(var i = 0; i < arangearr.length; i ++)
+        {
+            document.write(arangearr[i][0]+"<br>");
+            avg = avg+arangearr[i][1];
+
+        }
+
+        document.write("average mark  "+ avg/arangearr.length)
+
+    </script>
+</body>
+</html>
